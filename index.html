@@ -1,0 +1,187 @@
+<!--
+Student Name: Mohammed
+Student ID: YOUR_ID
+Course: Field Training I
+Task: Profile Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mohammed | Profile</title>
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <nav class="navbar">
+
+            <h2 class="logo"><span></span></h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+
+            <button id="themeBtn">Dark / Light</button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main -->
+    <main>
+
+        <!-- Profile Section -->
+        <section class="profile" id="home">
+
+            <img src="images/me.jpg" alt="Mohammed profile picture">
+
+            <h1>Mohamed Abd_elkhaliq</h1>
+
+            <h3>Computer Science Student | Future Software Engineer</h3>
+
+            <p>
+                Passionate about programming, software development,
+                backend engineering and learning new technologies.
+            </p>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section class="about" id="about">
+
+            <h2>About <span>Me</span></h2>
+
+            <p>
+                Hello! I'm Mohammed, a Computer Science student
+                interested in building software applications.
+
+                I enjoy learning programming languages,
+                solving problems and developing new projects.
+            </p>
+
+        </section>
+
+
+        <!-- Three Cards -->
+        <section class="skills" id="skills">
+
+            <h2>My <span>Interests</span></h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Programming</h3>
+                    <p>
+                        C#, PHP, JavaScript and learning
+                        new programming languages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Backend Development</h3>
+                    <p>
+                        Interested in databases,
+                        APIs, PHP and Laravel.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Problem Solving</h3>
+                    <p>
+                        Data Structures, Algorithms
+                        and logical thinking.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Comment Section -->
+        <section class="comments" id="comments">
+
+            <h2>Leave a <span>Comment</span></h2>
+
+            <form id="commentForm">
+
+                <div class="input-group">
+
+                    <label for="visitorName">Your Name</label>
+
+                    <input
+                        type="text"
+                        id="visitorName"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="visitorEmail">Your Email</label>
+
+                    <input
+                        type="email"
+                        id="visitorEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label for="commentText">Your Comment</label>
+
+                    <textarea
+                        id="commentText"
+                        placeholder="Write your comment..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit">Save Comment</button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 ZVXXXXX_22. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- JavaScript File (Last thing inside body) -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

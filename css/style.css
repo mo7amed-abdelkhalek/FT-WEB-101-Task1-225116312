@@ -1,0 +1,522 @@
+
+/* =========================
+   1. GLOBAL SETTINGS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #090909;
+    --card-background: #141414;
+    --text-color: #ffffff;
+    --secondary-text: #999999;
+    --gold: #d4af37;
+    --light-gold: #f9e29b;
+    --border-color: rgba(212, 175, 55, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 50% 0%, #29200d 0%, transparent 45%),
+        var(--background);
+
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.4s, color 0.4s;
+}
+
+
+/* =========================
+   2. NAVIGATION
+========================= */
+
+header {
+    padding: 25px 8%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--secondary-text);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================
+   3. BUTTONS
+========================= */
+
+button {
+    background: linear-gradient(135deg, #f9e29b, #c49a24);
+
+    color: #111;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 13px 25px;
+
+    font-family: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+}
+
+
+/* =========================
+   4. PROFILE HERO
+========================= */
+
+.profile {
+    text-align: center;
+    padding: 90px 20px 110px;
+}
+
+.profile img {
+    width: 210px;
+    height: 210px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 6px;
+
+    border: 2px solid var(--gold);
+
+    box-shadow:
+        0 0 20px rgba(212, 175, 55, 0.3),
+        0 0 60px rgba(212, 175, 55, 0.12);
+
+    transition: 0.4s;
+}
+
+.profile img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 45px rgba(212, 175, 55, 0.5);
+}
+
+.profile h1 {
+    margin-top: 30px;
+
+    font-size: clamp(38px, 6vw, 65px);
+
+    font-weight: 800;
+
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #d4af37,
+        #f9e29b
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.profile h3 {
+    margin: 15px 0;
+
+    color: var(--gold);
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.profile p {
+    max-width: 620px;
+
+    margin: 20px auto;
+
+    color: var(--secondary-text);
+
+    line-height: 2;
+    font-size: 14px;
+}
+
+
+/* =========================
+   5. ABOUT SECTION
+========================= */
+
+.about {
+    margin: 20px 8%;
+
+    padding: 45px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(212, 175, 55, 0.09),
+        rgba(255, 255, 255, 0.02)
+    );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 15px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.about h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about h2 span {
+    color: var(--gold);
+}
+
+.about p {
+    color: var(--secondary-text);
+    line-height: 2;
+    font-size: 14px;
+}
+
+
+/* =========================
+   6. INTERESTS / CARDS
+========================= */
+
+.skills {
+    margin: 100px 8%;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.skills h2 span {
+    color: var(--gold);
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+
+    padding: 35px 25px;
+
+    background: linear-gradient(
+        145deg,
+        #1c1c1c,
+        #101010
+    );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 15px;
+
+    transition: 0.4s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+
+    opacity: 0;
+
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+
+    border-color: var(--gold);
+
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.12);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card h3 {
+    color: var(--gold);
+
+    font-size: 19px;
+
+    margin-bottom: 18px;
+}
+
+.card p {
+    color: var(--secondary-text);
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   7. COMMENTS SECTION
+========================= */
+
+.comments {
+    margin: 80px 8%;
+
+    padding: 45px;
+
+    background: linear-gradient(
+        145deg,
+        #191919,
+        #101010
+    );
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.comments h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.comments h2 span {
+    color: var(--gold);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #090909;
+
+    color: white;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.input-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#message {
+    color: var(--gold);
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   8. FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    border-top: 1px solid var(--border-color);
+
+    color: var(--secondary-text);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   9. LIGHT MODE
+========================= */
+
+body.dark {
+    --background: #f2f0e9;
+    --card-background: #ffffff;
+    --text-color: #171717;
+    --secondary-text: #666666;
+    --border-color: rgba(150, 115, 20, 0.25);
+}
+
+body.dark {
+    background: #f2f0e9;
+}
+
+body.dark .navbar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.dark .card,
+body.dark .comments {
+    background: #ffffff;
+}
+
+body.dark .about {
+    background: #ffffff;
+}
+
+body.dark .input-group input,
+body.dark .input-group textarea {
+    background: #f5f5f5;
+    color: #171717;
+    border-color: #dddddd;
+}
+
+
+/* =========================
+   10. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 850px) {
+
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 40%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 4%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 20px;
+    }
+
+    .profile {
+        padding: 60px 15px;
+    }
+
+    .profile img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .about,
+    .comments {
+        margin: 30px 4%;
+        padding: 25px;
+    }
+
+    .skills {
+        margin: 60px 4%;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+}
